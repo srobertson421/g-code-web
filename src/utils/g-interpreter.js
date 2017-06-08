@@ -1,24 +1,15 @@
 import * as gcode from 'gcode';
 
-/*
-A B C D F G H I J K L M N P Q R S T X Y Z
-*/
-
 class Interpreter extends gcode.Interpreter {
 
   constructor() {
     super();
 
-    this.lineCounter = null;
+    this.lineCounter = 0;
   }
 
   incrementCounter() {
-    if(this.lineCounter === null) {
-      this.lineCounter = 0;
-    } else {
-      this.lineCounter++;
-    }
-
+    this.lineCounter++;
     console.log(this.lineCounter);
   }
 
